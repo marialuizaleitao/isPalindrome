@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(invertText("hello world"))
+	fmt.Println(isPalindrome("hello world"))
 }
 
 func invertText(text string) string {
@@ -12,4 +12,8 @@ func invertText(text string) string {
 		invertedText += string(text[i])
 	}
 	return invertedText
+}
+
+func isPalindrome(s string) bool {
+	return invertText(s) == s
 }
