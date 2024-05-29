@@ -55,3 +55,71 @@ func Test_invertText(t *testing.T) {
 		})
 	}
 }
+
+func Test_isPalindrome(t *testing.T) {
+	type args struct {
+		s string
+	}
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		{
+			name: "EmptyString",
+			args: args{
+				s: "",
+			},
+			want: true,
+		},
+		{
+			name: "SingleCharacter",
+			args: args{
+				s: "a",
+			},
+			want: true,
+		},
+		{
+			name: "TwoCharactersPalindrome",
+			args: args{
+				s: "aa",
+			},
+			want: true,
+		},
+		{
+			name: "TwoCharactersNonPalindrome",
+			args: args{
+				s: "ab",
+			},
+			want: false,
+		},
+		{
+			name: "PalindromeOddLength",
+			args: args{
+				s: "ana",
+			},
+			want: true,
+		},
+		{
+			name: "PalindromeEvenLength",
+			args: args{
+				s: "abba",
+			},
+			want: true,
+		},
+		{
+			name: "NonPalindrome",
+			args: args{
+				s: "hello",
+			},
+			want: false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := isPalindrome(tt.args.s); got != tt.want {
+				t.Errorf("isPalindrome() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
