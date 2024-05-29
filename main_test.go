@@ -197,3 +197,9 @@ func BenchmarkIsPalindrome(b *testing.B) {
 		isPalindrome("rotator")
 	}
 }
+
+func BenchmarkIsPalindrome2(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		isPalindrome2("rotator")
+	}
+}
