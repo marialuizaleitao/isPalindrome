@@ -36,6 +36,16 @@ Benchmark tests were conducted to measure the performance of the `isPalindrome` 
 
 Benchmark tests revealed that the `isPalindrome2` function, which directly compares characters, performs faster than the `isPalindrome` function, which involves string reversal. This is because the `isPalindrome2` function avoids the overhead of creating a reversed string and comparing it with the original. The direct character comparison approach of `isPalindrome2` results in better performance, especially for large strings.
 
+## Interactive Usage
+
+The Palindrome Checker program provides an interactive menu for users to perform actions such as checking if a word is a palindrome or learning about palindromes. Users can choose from the following options:
+
+- **What is a palindrome?**: Provides a simple explanation of what constitutes a palindrome.
+- **Check if a word is a palindrome**: Allows users to enter a word and determine if it's a palindrome.
+- **Exit**: Allows users to exit the program.
+
+Users can navigate the menu by entering the corresponding option number.
+
 ## Conclusion
 
 In conclusion, the Palindrome Checker project demonstrates the implementation of two different approaches to check for palindromes in a given string. Through the use of test-driven development (TDD) practices and benchmarking, the performance differences between the two implementations were analyzed, highlighting the importance of choosing efficient algorithms for common programming problems like palindrome detection.
