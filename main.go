@@ -15,5 +15,8 @@ func invertText(text string) string {
 }
 
 func isPalindrome(s string) bool {
+	if len(s) == 0 {
+		return false
+	}
 	return invertText(s) == s
 }
